@@ -209,6 +209,82 @@ function isPalindrome(s) {
         }
     },
     
+    reverse_integer: {
+        title: "Reverse Integer",
+        difficulty: "easy",
+        category: "Number Manipulation",
+        description: `
+            <h3>Deskripsi Soal</h3>
+            <p>Diberikan sebuah integer <code>x</code>, kembalikan <code>x</code> dengan digit-digitnya dibalik.</p>
+            <p>Jika membalik <code>x</code> menyebabkan nilai berada di luar range 32-bit integer [-2^31, 2^31 - 1], kembalikan 0.</p>
+            <p><strong>PENTING:</strong> Jangan mengubah integer menjadi string untuk membaliknya!</p>
+            
+            <h3>Contoh</h3>
+            <p><strong>Contoh 1:</strong></p>
+            <p>Input: <code>x = 123</code></p>
+            <p>Output: <code>321</code></p>
+            
+            <p><strong>Contoh 2:</strong></p>
+            <p>Input: <code>x = -123</code></p>
+            <p>Output: <code>-321</code></p>
+            
+            <p><strong>Contoh 3:</strong></p>
+            <p>Input: <code>x = 120</code></p>
+            <p>Output: <code>21</code></p>
+            
+            <p><strong>Contoh 4:</strong></p>
+            <p>Input: <code>x = 1534236469</code></p>
+            <p>Output: <code>0</code></p>
+            <p>Penjelasan: 1534236469 dibalik menjadi 9646324351, yang melebihi range 32-bit integer.</p>
+            
+            <h3>Constraints</h3>
+            <ul>
+                <li>-2^31 <= x <= 2^31 - 1</li>
+            </ul>
+            
+            <h3>Tips</h3>
+            <p>Gunakan operasi matematika (modulo, division) untuk mengekstrak digit satu per satu!</p>
+        `,
+        template: `/**
+ * Balik digit-digit dari integer x tanpa mengubahnya menjadi string.
+ * @param {number} x - Integer yang akan dibalik
+ * @return {number} - Integer yang sudah dibalik, atau 0 jika overflow
+ */
+function reverse(x) {
+    // TODO: Tulis kode kamu di sini
+    // Gunakan operasi matematika, bukan string manipulation!
+    
+}
+
+// Test cases akan dijalankan otomatis
+`,
+        testCases: [
+            { x: 123, expected: 321 },
+            { x: -123, expected: -321 },
+            { x: 120, expected: 21 },
+            { x: 1534236469, expected: 0 },
+            { x: 0, expected: 0 },
+            { x: 1000, expected: 1 },
+            { x: -1000, expected: -1 }
+        ],
+        testFunction: (userFunction, testCase) => {
+            try {
+                const result = userFunction(testCase.x);
+                if (typeof result !== 'number') {
+                    return { pass: false, message: `Output harus berupa number, got: ${typeof result}` };
+                }
+                
+                if (result === testCase.expected) {
+                    return { pass: true, message: `Berhasil! ${testCase.x} dibalik menjadi ${result}` };
+                } else {
+                    return { pass: false, message: `Expected ${testCase.expected}, got ${result}` };
+                }
+            } catch (error) {
+                return { pass: false, message: `Error: ${error.message}` };
+            }
+        }
+    },
+    
     group_anagrams: {
         title: "Group Anagrams",
         difficulty: "medium",
