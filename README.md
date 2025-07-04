@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# 🚀 Coding Problems - Interactive Learning Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi web interaktif untuk belajar dan berlatih algoritma coding dengan sistem progression yang memastikan user menyelesaikan soal secara berurutan.
 
-## Available Scripts
+## 🌟 Live Demo
 
-In the project directory, you can run:
+**Akses aplikasi:** [https://asruldev.github.io/coding-problems/](https://asruldev.github.io/coding-problems/)
 
-### `npm start`
+## ✨ Fitur Utama
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📚 **Sistem Soal Berjenjang**
+- **5 Soal** dari berbagai tingkat kesulitan (Easy, Medium, Hard)
+- **Progression System** - User harus menyelesaikan soal sebelumnya untuk membuka soal berikutnya
+- **Progress Tracking** - Progress tersimpan otomatis di localStorage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 💻 **Code Editor Terintegrasi**
+- **Syntax Highlighting** untuk JavaScript
+- **Real-time Code Execution**
+- **Test Runner** dengan feedback detail pass/fail
+- **Error Handling** yang informatif
 
-### `npm test`
+### 🎯 **Kategori Soal**
+- **Array Manipulation** - Two Sum, Maximum Subarray, Longest Consecutive Sequence
+- **String Processing** - Valid Palindrome, Group Anagrams  
+- **Number Manipulation** - Reverse Integer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📱 **Responsive Design**
+- **Desktop & Mobile** friendly
+- **Modern UI/UX** dengan animasi smooth
+- **Dark/Light Theme** support
 
-### `npm run build`
+## 🛠️ Teknologi
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:** React 19.1.0
+- **Styling:** CSS3 dengan Flexbox/Grid
+- **Code Execution:** JavaScript Function Constructor
+- **Storage:** localStorage untuk progress
+- **Deployment:** GitHub Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Cara Menjalankan
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (v14 atau lebih baru)
+- npm atau yarn
 
-### `npm run eject`
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/asruldev/coding-problems.git
+cd coding-problems
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Jalankan development server
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Aplikasi akan terbuka di [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build & Deploy
+```bash
+# Build untuk production
+npm run build
 
-## Learn More
+# Deploy ke GitHub Pages
+npm run deploy
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📖 Cara Menggunakan
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Pilih Soal** - Mulai dari soal pertama yang tersedia
+2. **Baca Deskripsi** - Pahami requirements dan constraints
+3. **Tulis Solusi** - Gunakan code editor untuk menulis JavaScript
+4. **Run Tests** - Klik tombol "Run Tests" untuk mengecek jawaban
+5. **Lihat Feedback** - Analisis hasil test dan perbaiki jika perlu
+6. **Progress** - Setelah semua test pass, soal berikutnya akan terbuka
 
-### Code Splitting
+## 🎯 Daftar Soal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Easy Level
+1. **Two Sum** - Temukan dua indeks yang jumlahnya sama dengan target
+2. **Maximum Subarray** - Cari subarray dengan jumlah terbesar
+3. **Valid Palindrome** - Cek apakah string adalah palindrome
+4. **Reverse Integer** - Balik digit integer tanpa string conversion
 
-### Analyzing the Bundle Size
+### Medium Level
+5. **Group Anagrams** - Kelompokkan string yang merupakan anagram
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Hard Level
+6. **Longest Consecutive Sequence** - Cari urutan consecutive terpanjang
 
-### Making a Progressive Web App
+## 🔧 Struktur Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+coding-problems/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Sidebar.js          # Navigation sidebar
+│   │   ├── Sidebar.css
+│   │   ├── ProblemView.js      # Main problem interface
+│   │   └── ProblemView.css
+│   ├── data/
+│   │   └── problems.js         # Problem definitions & test cases
+│   ├── App.js                  # Main app component
+│   └── index.js
+├── easy/                       # Problem files (external)
+├── medium/
+├── hard/
+└── package.json
+```
 
-### Advanced Configuration
+## 🧪 Test System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Setiap soal memiliki:
+- **Multiple Test Cases** dengan berbagai skenario
+- **Input Validation** untuk memastikan output yang benar
+- **Detailed Feedback** dengan pesan error yang informatif
+- **Edge Case Testing** untuk robustness
 
-### Deployment
+## 🎨 UI Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Sidebar
+- **Problem List** dengan status (locked/available/completed)
+- **Progress Indicator** visual
+- **Difficulty Badges** (Easy/Medium/Hard)
 
-### `npm run build` fails to minify
+### Problem View
+- **Problem Description** dengan HTML formatting
+- **Code Editor** dengan syntax highlighting
+- **Test Results** dengan pass/fail indicators
+- **Action Buttons** (Run Tests, Reset)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔒 Progression System
+
+- **Sequential Unlocking** - Soal terbuka satu per satu
+- **Progress Persistence** - Tersimpan di browser localStorage
+- **Visual Indicators** - Status soal yang jelas
+- **No Skipping** - Memastikan pembelajaran bertahap
+
+## 🚀 Deployment
+
+Aplikasi di-deploy menggunakan:
+- **GitHub Pages** untuk hosting
+- **gh-pages** package untuk automation
+- **Automatic builds** pada setiap push
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 📞 Contact
+
+Asrul Harahap - [@asruldev](https://github.com/asruldev)
+
+Project Link: [https://github.com/asruldev/coding-problems](https://github.com/asruldev/coding-problems)
+
+---
+
+⭐ **Star repository ini jika bermanfaat!**
