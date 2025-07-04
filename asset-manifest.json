@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/coding-problems/static/css/main.4979e312.css",
+    "main.js": "/coding-problems/static/js/main.1daed999.js",
+    "index.html": "/coding-problems/index.html",
+    "main.4979e312.css.map": "/coding-problems/static/css/main.4979e312.css.map",
+    "main.1daed999.js.map": "/coding-problems/static/js/main.1daed999.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4979e312.css",
+    "static/js/main.1daed999.js"
+  ]
+}
