@@ -9,7 +9,7 @@ Aplikasi web interaktif untuk belajar dan berlatih algoritma coding dengan siste
 ## ✨ Fitur Utama
 
 ### 📚 **Sistem Soal Berjenjang**
-- **5 Soal** dari berbagai tingkat kesulitan (Easy, Medium, Hard)
+- **6 Soal** dari berbagai tingkat kesulitan (Easy, Medium, Hard)
 - **Progression System** - User harus menyelesaikan soal sebelumnya untuk membuka soal berikutnya
 - **Progress Tracking** - Progress tersimpan otomatis di localStorage
 
