@@ -1,0 +1,168 @@
+.sidebar {
+  background: #f8fafc;
+  padding: 30px;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+}
+
+.problem-list h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a202c;
+}
+
+.difficulty-section {
+  margin-bottom: 25px;
+}
+
+.difficulty-section h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.problem-item {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.problem-item.available {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.problem-item.available:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+  border-color: #cbd5e1;
+}
+
+.problem-item.available.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+}
+
+.problem-item.available.active .problem-category {
+  color: rgba(255,255,255,0.8);
+}
+
+.problem-item.completed {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.problem-item.completed:hover {
+  background: #dcfce7;
+  transform: translateX(4px);
+}
+
+.problem-item.completed.active {
+  background: #22c55e;
+  color: white;
+  border-color: #16a34a;
+}
+
+.problem-item.completed.active .problem-category {
+  color: rgba(255,255,255,0.8);
+}
+
+.problem-item.locked {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.problem-item.locked:hover {
+  transform: none;
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.problem-title {
+  display: block;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.problem-category {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.completion-badge {
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.lock-badge {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.difficulty-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 12px 0 0 12px;
+}
+
+.problem-item.completed .difficulty-indicator {
+  background: #22c55e !important;
+}
+
+.problem-item.locked .difficulty-indicator {
+  background: #94a3b8 !important;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 300px;
+  }
+  
+  .problem-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .difficulty-section {
+    margin-bottom: 15px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .problem-item {
+    flex: 1;
+    min-width: 200px;
+  }
+} 
